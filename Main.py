@@ -15,7 +15,7 @@ pen.color('white')
 tela.tracer(0, 0) # Retira a animação da turtle
 
 # Função para adicionar ceu estrelado
-for i in range(200):
+for i in range(500):
     x = rand.randint(-800, 800)
     y = rand.randint(-360, 360)
 
@@ -33,7 +33,6 @@ pen.circle(200)       # Desenha um circulo de raio 50
 
 pen.up()             # Levanta o 'Rabo' para parar de desenhar
 pen.goto(0, 0)     # Indica uma coordenada a ir
-pen.dot(2, 'white')  # Desenha um ponto de tamanho 5 e cor branca
 pen.goto(0, 0)
 
 tela.exitonclick()
