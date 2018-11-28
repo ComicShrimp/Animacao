@@ -3,7 +3,7 @@ import time
 
 tela = turtle.Screen()  # Instancia a tela (Não necessario caso n mudar atributos)
 tela.bgcolor('black')    # Define a cor da tela
-tela.setup(800, 600)    # Define o tamanho da janela
+tela.setup(1200, 720)    # Define o tamanho da janela
 
 pen = turtle.Pen()   # Constrói um objeto caneta  (Pen)
 pen.color('white')
