@@ -6,6 +6,7 @@ tela.bgcolor('black')    # Define a cor da tela
 tela.setup(1200, 720)    # Define o tamanho da janela
 
 pen = turtle.Pen()   # Constrói um objeto caneta  (Pen)
+pen.shape('classic') # Muda a forma do cursor/caneta
 pen.color('white')
 pen.forward(100)     # anda 100 posições para a frente
 pen.right(45)        # gira o ponteiro em 45 graus para a direita
@@ -18,4 +19,4 @@ pen.dot(5, 'white')  # Desenha um ponto de tamanho 5 e cor branca
 pen.goto(0, 0)
 pen.down()           # Abaixa o 'Rabo'
 
-time.sleep(5)        # Tempo até janela ser fechada
+time.sleep(2)        # Tempo até janela ser fechada
