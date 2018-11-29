@@ -2,6 +2,8 @@ import turtle
 import random as rand
 import math
 
+# usar #000080 para azul com sobra e #0000ff para azul normal
+
 tela = turtle.Screen()  # Instancia a tela (Não necessario caso n mudar atributos)
 tela.bgcolor('black')    # Define a cor da tela
 tela.setup(1200, 720)    # Define o tamanho da janela
@@ -24,6 +26,8 @@ for i in range(500):
         pen.goto(x, y)
         pen.down()
         pen.dot(2, 'white')
+    else:
+        i = i - 1
 
 tela.update() # Faz update da tela, pois a animação está desligada
 pen.up()
@@ -33,6 +37,7 @@ pen.circle(200)       # Desenha um circulo de raio 50
 
 pen.up()             # Levanta o 'Rabo' para parar de desenhar
 pen.goto(0, 0)     # Indica uma coordenada a ir
-pen.goto(0, 0)
+pen.color("#000080")
+pen.dot(10)
 
 tela.exitonclick()
