@@ -21,12 +21,12 @@ tela.tracer(0, 0) # Retira a animação da turtle
 
 # Função para adicionar ceu estrelado
 for i in range(500):
-    x = rand.randint(-800, 800)
-    y = rand.randint(-360, 360)
+    xs = rand.randint(-800, 800)
+    ys = rand.randint(-360, 360)
 
-    if math.sqrt(pow(x, 2) + pow(y, 2)) > raio:
+    if math.sqrt(pow(xs, 2) + pow(ys, 2)) > raio:
         pen.up()
-        pen.goto(x, y)
+        pen.goto(xs, ys)
         pen.down()
         pen.dot(2, 'white')
     else:
@@ -43,9 +43,20 @@ for j in range(360):
     pen.forward(passo)
     pen.right(1)
 
+pen.up()
+
+#funciona mas está muito lento
+for x in range(-200, 200):
+    for y in range(-200, 200):
+        if math.sqrt(pow(x, 2) + pow(y, 2)) < raio:
+            pen.goto(x, y)
+            pen.dot(1, 'blue')
+            tela.update()
+
 pen.up()             # Levanta o 'Rabo' para parar de desenhar
 pen.goto(0, 0)       # Indica uma coordenada a ir
 pen.color("#000080")
 pen.dot(10)
+tela.update()
 
 tela.exitonclick()
