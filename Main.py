@@ -5,7 +5,7 @@ import math
 # usar #000080 para azul com sobra e #0000ff para azul normal
 # Apesar de existir uma função para desenhar o circulo, precisamos percorre-lo
 
-raio = 200
+raio = 125
 
 tela = turtle.Screen()  # Instancia a tela (Não necessario caso n mudar atributos)
 tela.bgcolor('black')    # Define a cor da tela
@@ -37,26 +37,19 @@ pen.up()
 pen.goto(0, raio)
 pen.down()
 
-passo = math.pi * raio / 180
-
-for j in range(360):
-    pen.forward(passo)
-    pen.right(1)
-
 pen.up()
 
 #funciona mas está muito lento
-for x in range(-200, 200):
-    for y in range(-200, 200):
+for x in range(-raio, raio):
+    for y in range(-raio, raio):
         if math.sqrt(pow(x, 2) + pow(y, 2)) < raio:
             pen.goto(x, y)
-            pen.dot(1, 'blue')
-            tela.update()
+            if rand.randint(0, 250) > 125 + x * 1.1:
+                pen.dot(1, "#0000ff")
+            else:
+                pen.dot(1, "#000080")
+    tela.update()
 
-pen.up()             # Levanta o 'Rabo' para parar de desenhar
-pen.goto(0, 0)       # Indica uma coordenada a ir
-pen.color("#000080")
-pen.dot(10)
 tela.update()
 
 tela.exitonclick()
