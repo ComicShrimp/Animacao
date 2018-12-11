@@ -5,7 +5,7 @@ import math
 # usar #000080 para azul com sobra e #0000ff para azul normal
 # Apesar de existir uma função para desenhar o circulo, precisamos percorre-lo
 
-raio = 125
+raio = 50
 
 tela = turtle.Screen()  # Instancia a tela (Não necessario caso n mudar atributos)
 tela.bgcolor('black')    # Define a cor da tela
@@ -44,10 +44,10 @@ for x in range(-raio, raio):
     for y in range(-raio, raio):
         if math.sqrt(pow(x, 2) + pow(y, 2)) < raio:
             pen.goto(x, y)
-            if rand.randint(0, 250) > 125 + x * 1.1:
-                pen.dot(1, "#0000ff")
+            if rand.randint(0, raio * 2) > raio + x * 1.2:
+                pen.dot(1, "#191970")
             else:
-                pen.dot(1, "#000080")
+                pen.dot(1, "#00ffff")
     tela.update()
 
 tela.update()
